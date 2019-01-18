@@ -13,9 +13,7 @@ app.secret_key = 'yang'
 api = Api(app)
 
 
-@app.before_first_request
-def create_tabke():
-    db.create_all()
+
 
 
 app.config['JWT_EXPIRATION_DELTA'] = datetime.timedelta(seconds=1800)
